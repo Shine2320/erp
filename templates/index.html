@@ -257,6 +257,7 @@
             <div class="card-body">
               <!-- Form -->
               <form class="js-validate needs-validation" novalidate>
+                {% csrf_token %}
                 <!-- Form -->
                 <div class="mb-4 mt-2">
                   <label class="form-label" for="signinSrEmail"
