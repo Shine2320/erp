@@ -27,7 +27,9 @@ DEBUG = True
 AUTH_USER_MODEL = 'main_app.User'
 ALLOWED_HOSTS = []
 
-AUTHENTICATION_BACKENDS = ['path.to.auth.module.EmailBackend']
+AUTHENTICATION_BACKENDS = (
+    'main_app.authentication.EmailBackend',
+)
 
 # Application definition
 

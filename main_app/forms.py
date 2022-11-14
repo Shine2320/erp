@@ -1,5 +1,5 @@
 from django import forms
-from django.conf import settings
+from .models import User
 from django.contrib.auth import authenticate
 
 class UserAuthenticationForm(forms.ModelForm):
@@ -9,7 +9,7 @@ class UserAuthenticationForm(forms.ModelForm):
     password  = forms.CharField(label= 'Password', widget=forms.PasswordInput)
 
     class Meta:
-        model  =  settings.AUTH_USER_MODEL
+        model  =  User
         fields =  ('email', 'password')
         widgets = {
                    'email':forms.TextInput(attrs={'class':'form-control'}),
