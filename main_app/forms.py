@@ -1,6 +1,7 @@
 from django import forms
 from .models import User
 from django.contrib.auth import authenticate
+from django.contrib.auth.forms import UserCreationForm
 
 class UserAuthenticationForm(forms.ModelForm):
     """
@@ -30,3 +31,11 @@ class UserAuthenticationForm(forms.ModelForm):
             password = self.cleaned_data.get('password')
             if not authenticate(email=email, password=password):
                 raise forms.ValidationError('Invalid Login')
+
+class NewUserForm(forms.ModelForm):
+    
+
+    class Meta:
+      model = User 
+      fields = ("email", "password",'accounts','hr','sales','purchase','reports')
+
