@@ -24,9 +24,10 @@ SECRET_KEY = 'django-insecure-0_7uu^j@+i3s^ogh48+#3@6vohy%qcyl0j9gkl-pg#e29(risk
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-AUTH_USER_MODEL = 'main_app.user'
+AUTH_USER_MODEL = 'main_app.User'
 ALLOWED_HOSTS = []
 
+AUTHENTICATION_BACKENDS = ['path.to.auth.module.EmailBackend']
 
 # Application definition
 

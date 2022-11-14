@@ -222,7 +222,7 @@
         class="position-fixed top-0 end-0 start-0 bg-img-start"
         style="
           height: 32rem;
-          background-image: url({%static'/assets/svg/components/card-6.svg'%});
+          background-image: url({%static '/assets/svg/components/card-6.svg'%});
         "
       >
         <!-- Shape -->
@@ -256,7 +256,7 @@
           <div class="card card-lg mb-5">
             <div class="card-body">
               <!-- Form -->
-              <form class="js-validate needs-validation" novalidate>
+              <form class="js-validate needs-validation" method="post">
                 {% csrf_token %}
                 <!-- Form -->
                 <div class="mb-4 mt-2">
@@ -305,7 +305,7 @@
                       placeholder="8+ characters required"
                       aria-label="8+ characters required"
                       required
-                      minlength="8"
+                      minlength="4"
                       data-hs-toggle-password-options='{
                            "target": "#changePassTarget",
                            "defaultClass": "bi-eye-slash",
@@ -351,7 +351,7 @@
     <script src="{%static '/assets/js/theme.min.js' %}"></script>
 
     <!-- JS Plugins Init. -->
-    <script>
+    {% comment %} <script>
       (function () {
         window.onload = function () {
           // INITIALIZATION OF BOOTSTRAP VALIDATION
@@ -368,6 +368,6 @@
           new HSTogglePassword(".js-toggle-password");
         };
       })();
-    </script>
+    </script> {% endcomment %}
   </body>
 </html>

@@ -3,6 +3,6 @@ from .views import login,dashboard
 
 urlpatterns = [
     path("",dashboard),
-    path('login/',login)
+    path('login/',login,name='login')
 
 ]
